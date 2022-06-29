@@ -102,6 +102,64 @@ img{
     top: 2rem;
     background-color: var(--first-color);
 }
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: #555;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  /* .popup .popuptext .show .p {
+      background-color: #d4d4e3;
+  } */
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
 /* LAYOUT */
 .l-header {
     width: 100%;
@@ -216,10 +274,13 @@ color: var(--first-color);
 position: absolute;
 right: 0;
 bottom: 0;
-width: 250px;
+width: 350px;
+z-index: var(--z-back);
 }
 .home__img img{
-    border-radius: 20%;
+    border-radius: 50%;
+    height: 500px;
+    width: 300px;
 }
 /* BUTTONS */
 .button{
@@ -320,12 +381,28 @@ width: 250px;
     border-radius: 0.5rem;
     overflow: hidden;
 }
+.work__item{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 30px;
+}
+.work-info{
+    color: purple;
+}
 .work__img img{
     transition: 1s;
     cursor: pointer;
 }
 .work__img img:hover{
     transform: scale(1.1);
+}
+.icon{
+    opacity: 1;
+    -webkit-transform: translate(0px);
+    transform: translate(0px);
+}
+.icon.bx{
+    line-height: 40px;
 }
 /*CONTACT */
 .contact__input{
@@ -418,6 +495,7 @@ width: 250px;
     .home__img{
         width: 457px;
         bottom: 15px;
+        border-radius: 0.5rem;
     }
     .about__container,
     .skills__container{
@@ -432,8 +510,12 @@ width: 250px;
     }
     .work__container{
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(2,);
         column-gap: 3rem;
+    }
+    
+    .work__container .work__image{
+        border: 0.1rem solid purple;
     }
     .contact__form{
         width: 360px;

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css"/>
-    <link  rel="shortcut icon" href="assets/images/logo.jpg"/>
+    <link  rel="shortcut icon" href="assets/images/my1 (2).jpg"/>
     <!--BOXICONS-->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'/>
     
@@ -56,9 +56,52 @@
                   A Web Designer
              </h1>
              <a href="#contact" class="button">Contact Me</a> &nbsp;&nbsp;
-             <a href="https://drive.google.com/file/d/1Ohutc3d1U9KudemyavxyPoHoB3NaL-74/view?usp=sharing" 
-             class="button" target="_blank"
-             >Download CV</a>
+             <div class="popup button"  onclick="myFunction()"> Download CV
+                <span class="popuptext" id="myPopup"> 
+                    <p style="color: #ffffff;
+                              font-size: small;
+                              cursor: none;
+                              -webkit-transition: all 0.3s ease;
+                              transition: all 0.3s ease;"
+                              >
+                              Hi! click on any format to download my cv
+                            </p>
+                    <a href="https://docs.google.com/document/d/1vR4mxOQUQqaEEjebWTHef8dk7vtq00ZO/edit?usp=sharing&ouid=115930843242463130215&rtpof=true&sd=true"  target="_">
+                        <button style="
+                            font-size: 12px;
+                            font-weight: 300;
+                            padding: 5px 3px;
+                            color: #3e99f4;
+                            border-radius: 4px;
+                            -webkit-transition: all 0.3s ease;
+                            transition: all 0.3s ease;
+                            display: inline-block;
+                            margin-top: 0.5rem;
+                            white-space: nowrap;
+                            margin-right: 1rem;
+                            border: none;
+                            cursor: pointer;
+                            ">  MSWord Format
+                        </button>
+                    </a>
+                    <a href= "https://drive.google.com/file/d/1Ohutc3d1U9KudemyavxyPoHoB3NaL-74/view?usp=sharing" target="_">
+                        <button style="
+                            font-size: 12px;
+                            font-weight: 300;
+                            padding: 5px 3px;
+                            color: #ec1839;
+                            border-radius: 4px;
+                            -webkit-transition: all 0.2s ease;
+                            transition: all 0.2s ease;
+                            display: inline-block;
+                            white-space: normal;
+                            border: none;
+                            cursor: pointer;
+                            ">PDF Format
+                        </button>
+                    </a>
+                </span>
+                </div>
             </div>
  
              <div class="home__social">
@@ -80,7 +123,7 @@
              </div>
           
          <div class="home__img">
-             <img src="assets/images/my1.jpg" alt="my1.jpg"/>
+             <img src="assets/images/my2.png" alt="my2" width="700" height="1000"/>
          </div>
          </section>
             </main>
@@ -91,7 +134,7 @@
 
             <div class="about__container bd-grid">
                 <div class="about__img">
-                    <img src="assets/images/my1.jpg" alt="my1.jpg"/>
+                    <img src="assets/images/my1 (2).jpg" alt="my1 (2).jpg"/>
                 </div>
             
                 <div>
@@ -191,32 +234,17 @@
             <h2 class="section-title">Work</h2>
 
             <div class="work__container bd-grid">
-                <div class="work__img">
-                    <img src="assets/images/graphoff1.jpg" alt="graphoff1.jpg"/>
+                <div class="work__image">
+                    <img src="assets/images/new.PNG" alt="work"/>
+                    <a class="work-info icon" href="https://abdulganiyysportfolio.netlify.app" target="_blank"><i class="bx bx-link-external"></i>Portfolio</a>
                 </div>
-                <div class="work__img">
-                    <img src="assets/images/graphoff2.jpg" alt="graphoff2.jpg"/>
+                <div class="work__image">
+                    <img src="assets/images/new1.PNG" alt="work"/>
+                    <a class="work-info icon" href="https://portfoliowebsite1606.netlify.app/" target="_blank"><i class="bx bx-link-external"></i>Portfolio</a>
                 </div>
-                <div class="work__img">
-                    <img src="assets/images/graphoff3.jpg" alt="graphoff3.jpg"/>
-                </div>
-                <div class="work__img">
-                    <img src="assets/images/graphoff4.jpg" alt="graphoff4.jpg"/>
-                </div>
-                <div class="work__img">
-                    <img src="assets/images/graphpoff5.jpg" alt="graphpoff5.jpg"/>
-                </div>   
-                <div class="work__img">
-                    <img src="assets/images/weboffice1.jpg" alt="weboffice1.jpg"/>
-                </div>
-                <div class="work__img">
-                    <img src="assets/images/weboffice2.jpg" alt="weboffice2.jpg"/>
-                </div>
-                <div class="work__img">
-                    <img src="assets/images/weboffice3.jpg" alt="weboffice3.jpg"/>
-                </div>
-                <div class="work__img">
-                    <img src="assets/images/weboffice4.jpg" alt="weboffice4.jpg"/>
+                <div class="work__image">
+                    <img src="assets/images/new 2.PNG" alt="work"/>
+                    <a class="work-info icon" href="https://foodresturant.netlify.app/" target="_blank"><i class="bx bx-link-external"></i>Resturant</a>
                 </div>
             </div>
         </section>
@@ -233,7 +261,7 @@
           <iframe name="hidden_iframe" 
           id="hidden_iframe"
           style="display: none"
-          onload="if(submitted){window.location='https://abdulganiyysportfolio.netlify.app/'}"></iframe>
+          onload="if(submitted){window.location='https://abdulganiyyportfolio.netlify.app/'}"></iframe>
             <!--redirect user to your website after submitting to google sheets end-->
  
              <form  
@@ -243,12 +271,14 @@
              onsubmit="submitted=true"
              class="contact__form">
              
-                 <input type="text" placeholder="Name" class="contact__input" name="fvv"/>
-                 <input type="email" placeholder="Email" class="contact__input" name="partialResponse"/>
+                 <input type="text" placeholder="Name" class="contact__input" name="entry.1985461293"/>
+                 <input type="email" placeholder="Email" class="contact__input" name="entry.1540010851"/>
                  <textarea placeholder="Message" 
+                 id=""
+                 cols="0"
                  rows="10"
                   class="contact__input"
-                  name="pageHistory"
+                  name="entry.602009293"
                   ></textarea>
                  <button type="submit" class="contact__button button">
                      Send Message</button>
@@ -265,7 +295,7 @@
            <a href="https://web.whatsapp.com/" class="footer__icon"><i class="bx bxl-whatsapp"></i></a>
            <a href="https://twitter.com/home?lang=en" class="footer__icon"><i class="bx bxl-twitter"></i></a>
         </div>
-        <p>&#169; 2022 copyright all right reserved standard innovatives</p>
+        <p>&#169; 2022 copyright all right reserved| Abdulganiyy | standard innovatives</p>
     </footer>
 
    <!--SCROLL REVEAL-->
